@@ -1,0 +1,46 @@
+package: github.com/mfojtik/k8s-cli
+import:
+- package: github.com/evanphx/json-patch
+- package: github.com/ghodss/yaml
+- package: github.com/spf13/cobra
+- package: github.com/spf13/pflag
+- package: golang.org/x/text
+  subpackages:
+  - encoding/unicode
+  - transform
+- package: k8s.io/api
+  repo:    https://github.com/openshift/kubernetes-api.git
+  version: origin-3.10-kubernetes-1.10.2
+  subpackages:
+  - core/v1
+- package: k8s.io/apimachinery
+  repo:    https://github.com/openshift/kubernetes-apimachinery.git
+  version: origin-3.10-kubernetes-1.10.2
+  subpackages:
+  - pkg/api/errors
+  - pkg/api/meta
+  - pkg/apis/meta/v1
+  - pkg/apis/meta/v1/unstructured
+  - pkg/apis/meta/v1/unstructured/unstructuredscheme
+  - pkg/fields
+  - pkg/labels
+  - pkg/runtime
+  - pkg/runtime/schema
+  - pkg/runtime/serializer
+  - pkg/types
+  - pkg/util/errors
+  - pkg/util/json
+  - pkg/util/sets
+  - pkg/util/yaml
+  - pkg/watch
+- package: k8s.io/client-go
+  repo:    https://github.com/openshift/kubernetes-client-go.git
+  version: origin-3.10-kubernetes-1.10.2-cli-pre-rebase
+  subpackages:
+  - discovery
+  - kubernetes/scheme
+  - rest
+  - restmapper
+  - tools/clientcmd
+  - tools/clientcmd/api
+  - util/homedir
